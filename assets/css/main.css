@@ -78,11 +78,11 @@ html {
   box-sizing: inherit; }
 
 body {
-  background-color: #935d8c;
-  background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-  background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-  background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-  background-image: url("images/overlay.png"), linear-gradient(45deg, #e37682 15%, #5f4d93 85%); }
+  background-color: #28799e;
+  background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #28799e 15%, #28799e 85%);
+  background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #28799e 15%, #28799e 85%);
+  background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #28799e 15%, #28799e 85%);
+  background-image: url("images/overlay.png"), linear-gradient(45deg, #28799e 15%, #28799e 85%); }
   body.is-preload *, body.is-preload *:before, body.is-preload *:after {
     -moz-animation: none !important;
     -webkit-animation: none !important;
@@ -95,7 +95,7 @@ body {
 
 /* Type */
 body {
-  background-color: #935d8c;
+  background-color: #28799e;
   color: rgba(255, 255, 255, 0.65); }
 
 body, input, select, textarea {
@@ -1293,7 +1293,7 @@ select {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' preserveAspectRatio='none' viewBox='0 0 40 40'%3E%3Cpath d='M9.4,12.3l10.4,10.4l10.4-10.4c0.2-0.2,0.5-0.4,0.9-0.4c0.3,0,0.6,0.1,0.9,0.4l3.3,3.3c0.2,0.2,0.4,0.5,0.4,0.9 c0,0.4-0.1,0.6-0.4,0.9L20.7,31.9c-0.2,0.2-0.5,0.4-0.9,0.4c-0.3,0-0.6-0.1-0.9-0.4L4.3,17.3c-0.2-0.2-0.4-0.5-0.4-0.9 c0-0.4,0.1-0.6,0.4-0.9l3.3-3.3c0.2-0.2,0.5-0.4,0.9-0.4S9.1,12.1,9.4,12.3z' fill='rgba(255, 255, 255, 0.35)' /%3E%3C/svg%3E"); }
   select option {
     color: #ffffff;
-    background: #935d8c; }
+    background: #28799e; }
 
 input[type="checkbox"] + label,
 input[type="radio"] + label {
@@ -1307,7 +1307,7 @@ input[type="checkbox"]:checked + label:before,
 input[type="radio"]:checked + label:before {
   background-color: #ffffff;
   border-color: #ffffff;
-  color: #935d8c; }
+  color: #28799e; }
 
 input[type="checkbox"]:focus + label:before,
 input[type="radio"]:focus + label:before {
@@ -1592,6 +1592,17 @@ ul.icons {
       padding-right: 0 !important; }
 
 /* Section/Article */
+section {
+  width: 64em;
+  max-width: calc(100% - 4em);
+  margin: 0 auto; }
+  @media screen and (max-width: 1280px) {
+    section {
+      max-width: calc(100% - 2em); } }
+  @media screen and (max-width: 980px) {
+    section {
+      max-width: 100%; } }
+
 section.special, article.special {
   text-align: center; }
 
@@ -1870,6 +1881,21 @@ table.alt tbody tr td {
 .spotlight .image {
   border-color: rgba(255, 255, 255, 0.35); }
 
+.project {
+  width: 100%;
+  border: 1px solid #dddddd;
+  border-radius: .2em;
+  padding: .6em;
+  display: block; }
+
+.project img {
+  border-radius: .2em;
+  width: 100%;
+  vertical-align: middle; }
+
+.project + h3 {
+  margin-top: 1em; }
+
 /* Header */
 #header {
   padding: 5em 5em 1em 5em ;
@@ -1958,12 +1984,9 @@ table.alt tbody tr td {
   background-color: #ffffff;
   color: #636363;
   position: absolute;
-  width: 64em;
-  max-width: calc(100% - 4em);
+  width: 100%;
   padding: 1em;
   background-color: #f7f7f7;
-  border-top-left-radius: 0.25em;
-  border-top-right-radius: 0.25em;
   cursor: default;
   text-align: center; }
   #nav input, #nav select, #nav textarea {
@@ -2034,8 +2057,7 @@ table.alt tbody tr td {
 /* Main */
 #main {
   background-color: #ffffff;
-  color: #636363;
-  border-radius: 0.25em; }
+  color: #636363; }
   #main input, #main select, #main textarea {
     color: #636363; }
   #main a:hover {
@@ -2288,12 +2310,4 @@ table.alt tbody tr td {
 
 /* Wrapper */
 #wrapper {
-  width: 64em;
-  max-width: calc(100% - 4em);
-  margin: 0 auto; }
-  @media screen and (max-width: 480px) {
-    #wrapper {
-      max-width: calc(100% - 2em); } }
-  @media screen and (max-width: 360px) {
-    #wrapper {
-      max-width: 100%; } }
+  width: 100%; }

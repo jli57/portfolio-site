@@ -1,0 +1,18 @@
+
+.project {
+  width: 100%;
+  border: 1px solid #dddddd;
+  border-radius: .2em;
+  padding: .6em;
+  display: block;
+}
+
+.project img {
+  border-radius: .2em;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.project + h3 {
+  margin-top: 1em;
+}

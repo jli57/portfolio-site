@@ -5,6 +5,19 @@
 ///
 
 /* Section/Article */
+  section {
+		width: 64em;
+		max-width: calc(100% - 4em);
+    margin: 0 auto;
+
+    @include breakpoint('<=large') {
+			max-width: calc(100% - 2em);
+		}
+
+		@include breakpoint('<=medium') {
+			max-width: 100%;
+		}
+  }
 
 	section, article {
 		&.special {
