@@ -5,12 +5,12 @@
   border-radius: .2em;
   padding: .6em;
   display: block;
-}
 
-.project img {
-  border-radius: .2em;
-  width: 100%;
-  vertical-align: middle;
+  img {
+    border-radius: .2em;
+    width: 100%;
+    vertical-align: middle;
+  }
 }
 
 .project + h3 {
