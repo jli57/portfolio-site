@@ -45,40 +45,24 @@
     }
   }
 
-  @include breakpoint('<=medium') {
+
+  @include breakpoint('>=large') {
     li {
-      strong, b {
-        font-size: 1.5em;
-      }
+      width: 20%;
     }
-  }
+   }
+
 
   @include breakpoint('<=small') {
-    display: block;
-    width: 20em;
-    max-width: 100%;
-    margin: 0 auto _size(element-margin) auto;
+   li {
+     width: 33.33%;
+   }
+  }
 
+  @include breakpoint('<=xxsmall') {
     li {
-      &:first-child {
-        border-bottom-left-radius: 0;
-        border-top-right-radius: _size(border-radius);
-      }
-
-      &:last-child {
-        border-top-right-radius: 0;
-        border-bottom-left-radius: _size(border-radius);
-      }
-
-      .icon {
-        &:before {
-          font-size: 3.75rem;
-        }
-      }
-
-      strong, b {
-        font-size: 2.5em;
-      }
+      width: 50%;
     }
   }
+
 }
