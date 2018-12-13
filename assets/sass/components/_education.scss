@@ -1,0 +1,17 @@
+
+.education {
+  width: 100%;
+  display: block;
+
+  img {
+    border-radius: .2em;
+    width: 100%;
+    vertical-align: middle;
+  }
+}
+
+#education {
+  p {
+    margin-bottom: _size(element-margin) * 0.5;
+  }
+}
