@@ -57,10 +57,4 @@
    }
   }
 
-  @include breakpoint('<=xxsmall') {
-    li {
-      width: 50%;
-    }
-  }
-
 }
