@@ -15,8 +15,9 @@
 		}
 
 		p {
-			font-size: 1.25em;
-			letter-spacing: _font(letter-spacing);
+			font-size: 1em;
+      letter-spacing: _font(letter-spacing);
+      margin-bottom: _size(element-margin) * 0.5;
 		}
 
 		&.alt {
