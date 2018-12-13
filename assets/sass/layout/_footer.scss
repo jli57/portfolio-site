@@ -15,7 +15,7 @@
 
 		> * {
 			width: calc(50% - #{_size(element-margin)});
-			margin-left: _size(element-margin);
+
 		}
 
 		.copyright {
@@ -41,9 +41,6 @@
 				margin-bottom: (_size(element-margin) * 1.5);
 			}
 
-			.copyright {
-				text-align: left;
-			}
 		}
 
 		@include breakpoint('<=small') {
