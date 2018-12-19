@@ -1,18 +1,123 @@
+.projects {
+  @include vendor('display', 'flex');
+  @include vendor('flex-wrap', 'wrap');
+  @include vendor('justify-content', 'center');
+  width: calc(100% + #{_size(element-margin)});
+  margin: 0 0 (_size(element-margin) * 1.5) (_size(element-margin) * -1);
+  padding: 0;
+  list-style: none;
 
-.project {
-  width: 100%;
-  border: 1px solid #dddddd;
-  border-radius: .2em;
-  padding: .6em;
-  display: block;
+  li {
 
-  img {
-    border-radius: .2em;
+    width: calc(#{(100%/3)} - #{_size(element-margin)});
+    margin-left: _size(element-margin);
+    margin-top: (_size(element-margin) * 1.5);
+    padding: 0;
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      margin-top: 0;
+    }
+
+    .project {
+      border: 2px solid #dddddd;
+      border-radius: .2em;
+      display: block;
+      margin-bottom: _size(element-margin);
+
+      img {
+        width: 100%;
+        vertical-align: middle;
+      }
+    }
+
+    .project-desc {
+      width:  calc(#{(100%)} - #{_size(element-margin)*.5});
+      text-align: left;
+
+      p:first-of-type {
+        margin-bottom: _size(element-margin)*.25;
+      }
+    }
+  }
+
+  @include breakpoint('<=medium') {
+    li {
+      @include vendor('display', 'flex');
+      @include vendor('justify-content', 'space-between');
+
+      width: calc(#{(100%)} - #{_size(element-margin)});
+
+      &:nth-child(1) {
+        margin-top: 0;
+      }
+
+      &:nth-child(n+1) {
+        margin-top: _size(element-margin);
+      }
+
+      &:nth-child(even) {
+        @include vendor('flex-direction', 'row-reverse');
+      }
+
+      .project {
+        width:  calc(#{(50%)} - #{_size(element-margin)*.5});
+        border: 1px solid #dddddd;
+        border-radius: .2em;
+        display: block;
+
+        img {
+          border-radius: .2em;
+          width: 100%;
+          vertical-align: middle;
+        }
+      }
+
+      .project-desc {
+        width:  calc(#{(50%)} - #{_size(element-margin)*.5});
+        text-align: left;
+
+        p:first-of-type {
+          margin-bottom: _size(element-margin)*.25;
+        }
+      }
+
+    }
+  }
+
+  @include breakpoint('<=small') {
     width: 100%;
-    vertical-align: middle;
+    margin: 0 0 _size(element-margin) 0;
+
+    li {
+
+      display: block;
+
+      width: 100%;
+      margin-left: 0;
+      margin-top: _size(element-margin);
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        margin-top: _size(element-margin);
+      }
+
+      .project {
+        width: 100%;
+        margin: auto;
+      }
+
+      .project-desc {
+        text-align: center;
+
+        h3 {
+          margin-top: _size(element-margin)*.5;
+        }
+      }
+
+    }
   }
 }
 
-.project + h3 {
-  margin-top: 1em;
-}
+
