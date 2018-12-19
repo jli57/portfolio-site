@@ -21,13 +21,14 @@
     }
 
     .project {
-      border: 2px solid #dddddd;
-      border-radius: .2em;
       display: block;
       margin-bottom: _size(element-margin);
 
       img {
+        border: 1px solid #dddddd;
+        border-radius: .2em;
         width: 100%;
+        overflow: hidden;
         vertical-align: middle;
       }
     }
@@ -63,12 +64,9 @@
 
       .project {
         width:  calc(#{(50%)} - #{_size(element-margin)*.5});
-        border: 1px solid #dddddd;
-        border-radius: .2em;
         display: block;
 
         img {
-          border-radius: .2em;
           width: 100%;
           vertical-align: middle;
         }
